@@ -1,7 +1,8 @@
-#include "src/HelloWorld.hpp"
+#include "src/file_manager.hpp"
 
-int main() {
- HelloWorld world;
- world.say();
- return 0;
+int main() 
+{
+    file_manager::file_object object(file_manager::obj_types::pdf,"object","path");
+
+    return 0;
 }
