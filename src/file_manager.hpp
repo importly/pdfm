@@ -6,27 +6,30 @@
 #include <vector>
 #include <tuple>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
-namespace file_manager
-{
-
-	enum class obj_types
-	{
+namespace file_manager {
+	enum class obj_types {
 		pdf,
 		folder,
 		other
 	};
 
-	class file_object
-	{
+	void make_dir(string path);
+
+	fstream make_pdf_data_file(string path);
+
+	class file_object {
 	public:
 		obj_types file_type;
 		vector<file_object> objects;
+		string path;
+		string name;
 
 		file_object(obj_types type, string name, string path);
 	};
 
-	std::ostream& operator<<(std::ostream& strm, const obj_types& a);
+	std::ostream& operator<<(std::ostream& strm, const obj_types& a); // figure out string output for obj_types
 }
