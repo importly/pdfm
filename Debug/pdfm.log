@@ -1,5 +1,2 @@
 ﻿  main.cpp
-  file_manager.cpp
-C:\Users\aryan\Documents\cpp_programming\pdfmvs\pdfm\pdfm\src\file_manager.cpp(24,20): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
   pdfm.vcxproj -> C:\Users\aryan\Documents\cpp_programming\pdfmvs\pdfm\Debug\pdfm.exe

@@ -4,15 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <vector>
-#include <tuple>
 #include <string>
-#include <fstream>
+#include <fstream> 
 
 using namespace std;
 
 namespace file_manager {
 	extern float version; 
-	enum obj_types {
+	enum class obj_types {
 		pdf,
 		folder,
 		other
@@ -28,11 +27,12 @@ namespace file_manager {
 	class file_object {
 	public:
 		obj_types file_type;
-		vector<file_object> objects;
+		vector<file_object> objects; 
 		string path;
-		string name;
+		string name; 
+		unsigned int page;
 
-		file_object(obj_types type, string name, string path);
+		file_object(obj_types type, string name, string path,unsigned int page);
 	};
 
 	extern vector<file_object> files;
