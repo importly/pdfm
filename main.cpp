@@ -8,8 +8,7 @@ int main() {
 
 	fm::make_dir("./books");
 	
-	fstream datafile = fm::make_pdf_data_file("");
+	fm::make_pdf_data_file("books/pdf_datafile.data");
 	
-	datafile.close();
 	return 0;
 }

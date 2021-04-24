@@ -11,7 +11,8 @@
 using namespace std;
 
 namespace file_manager {
-	enum class obj_types {
+	extern float version; 
+	enum obj_types {
 		pdf,
 		folder,
 		other
@@ -19,7 +20,10 @@ namespace file_manager {
 
 	void make_dir(string path);
 
-	fstream make_pdf_data_file(string path);
+	void read_data_file(string path);
+	void write_data_file(string path);
+
+	void make_pdf_data_file(string path);
 
 	class file_object {
 	public:
@@ -30,6 +34,8 @@ namespace file_manager {
 
 		file_object(obj_types type, string name, string path);
 	};
+
+	extern vector<file_object> files;
 
 	std::ostream& operator<<(std::ostream& strm, const obj_types& a); // figure out string output for obj_types
 }
